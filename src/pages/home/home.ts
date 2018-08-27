@@ -7,7 +7,7 @@ import { MusicProvider } from '../../providers/musics/musics';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public allMusic = [];
+  public allMusic:Array = [];
 
   constructor(
     public navCtrl: NavController,
@@ -27,7 +27,7 @@ export class HomePage {
     this.musicProvider.getMusic()
     .subscribe((musicList) => {
       allMusicLoadingController.dismiss();
-      this.allMusic:any = musicList;
+      this.allMusic = musicList;
     });
   }
 
