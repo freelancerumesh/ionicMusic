@@ -27,7 +27,7 @@ export class HomePage {
     this.musicProvider.getMusic()
     .subscribe((musicList) => {
       allMusicLoadingController.dismiss();
-      this.allMusic = musicList;
+      this.allMusic:any = musicList;
     });
   }
 
